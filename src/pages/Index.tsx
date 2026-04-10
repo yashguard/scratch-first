@@ -1,16 +1,51 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import HeroSection from '@/components/wedding/HeroSection';
+import ScratchReveal from '@/components/wedding/ScratchReveal';
+import CountdownTimer from '@/components/wedding/CountdownTimer';
+import CoupleCarousel from '@/components/wedding/CoupleCarousel';
+import VenueSection from '@/components/wedding/VenueSection';
+import Timeline from '@/components/wedding/Timeline';
+import RSVPForm from '@/components/wedding/RSVPForm';
+import CalendarButton from '@/components/wedding/CalendarButton';
+import ThankYou from '@/components/wedding/ThankYou';
+import ContactFooter from '@/components/wedding/ContactFooter';
+import OrnamentalDivider from '@/components/wedding/OrnamentalDivider';
+import FloatingParticles from '@/components/wedding/FloatingParticles';
+import MusicPlayer from '@/components/wedding/MusicPlayer';
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
+const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
-    </div>
+    <>
+      <ScratchReveal />
+      <FloatingParticles />
+      <MusicPlayer />
+
+      <main className="relative">
+        <HeroSection />
+        <OrnamentalDivider variant="floral" />
+
+        <CountdownTimer />
+        <OrnamentalDivider variant="wave" />
+
+        <CoupleCarousel />
+        <OrnamentalDivider variant="zigzag" />
+
+        <VenueSection />
+        <OrnamentalDivider variant="torn" />
+
+        <Timeline />
+        <OrnamentalDivider variant="dots" />
+
+        <RSVPForm />
+        <CalendarButton />
+        <OrnamentalDivider variant="floral" />
+
+        <ThankYou />
+        <OrnamentalDivider variant="wave" />
+
+        <ContactFooter />
+      </main>
+    </>
   );
 };
-
-const Index = PlaceholderIndex;
 
 export default Index;
