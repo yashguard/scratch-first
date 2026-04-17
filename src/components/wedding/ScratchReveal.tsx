@@ -1,16 +1,12 @@
 import { useState, useRef, useCallback, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useScrollLock } from '@/hooks/useScrollLock';
 
 const ScratchReveal = () => {
   const [revealed, setRevealed] = useState(false);
   const [showConfetti, setShowConfetti] = useState(false);
-  const [dismissed, setDismissed] = useState(false);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const isDrawing = useRef(false);
   const totalPixels = useRef(0);
-
-  useScrollLock(!dismissed);
 
   const checkRevealPercentage = useCallback(() => {
     const canvas = canvasRef.current;
@@ -26,7 +22,6 @@ const ScratchReveal = () => {
     if (percent > 0.55 && !revealed) {
       setRevealed(true);
       setShowConfetti(true);
-      setTimeout(() => setDismissed(true), 3000);
     }
   }, [revealed]);
 
@@ -121,13 +116,7 @@ const ScratchReveal = () => {
   }));
 
   return (
-    <AnimatePresence>
-      {!dismissed && (
-        <motion.div
-          exit={{ opacity: 0 }}
-          transition={{ duration: 1 }}
-          className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-background"
-        >
+    <section className="relative w-full py-24 flex flex-col items-center justify-center bg-background px-4 overflow-hidden">
           {/* Decorative top */}
           <motion.p
             initial={{ opacity: 0, y: -20 }}
@@ -205,18 +194,18 @@ const ScratchReveal = () => {
                 rotate: Math.random() * 720 - 360,
               }}
               transition={{ duration: p.duration, delay: p.delay, ease: 'easeOut' }}
-              className="fixed pointer-events-none"
+              className="fixed pointer-events-none z-50"
               style={{
                 width: p.size,
                 height: p.size,
                 backgroundColor: p.color,
                 borderRadius: Math.random() > 0.5 ? '50%' : '2px',
+                left: 0,
+                top: 0,
               }}
             />
           ))}
-        </motion.div>
-      )}
-    </AnimatePresence>
+    </section>
   );
 };
 

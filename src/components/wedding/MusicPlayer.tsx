@@ -41,7 +41,7 @@ const MusicPlayer = () => {
     <>
       <audio ref={audioRef} loop preload="none">
         {/* Placeholder: replace with actual audio file */}
-        <source src="/assets/audio/background-music.mp3" type="audio/mpeg" />
+        <source src="https://framerusercontent.com/assets/7dqA8jlZHij9fuyhj602jarV4eg.mp3" type="audio/mpeg" />
       </audio>
 
       <motion.button

@@ -11,10 +11,10 @@ const HeroSection = () => {
         className="absolute top-8 left-8 w-32 h-32 md:w-48 md:h-48 opacity-30"
       >
         <svg viewBox="0 0 200 200" fill="none" className="w-full h-full">
-          <path d="M10 10 Q100 10 100 100 Q100 10 190 10" stroke="hsl(var(--gold))" strokeWidth="1.5" fill="none"/>
-          <path d="M10 10 Q10 100 100 100 Q10 100 10 190" stroke="hsl(var(--gold))" strokeWidth="1.5" fill="none"/>
-          <circle cx="100" cy="100" r="30" stroke="hsl(var(--gold))" strokeWidth="1" fill="none"/>
-          <circle cx="100" cy="100" r="15" stroke="hsl(var(--gold))" strokeWidth="0.5" fill="none"/>
+          <path d="M10 10 Q100 10 100 100 Q100 10 190 10" stroke="hsl(var(--gold))" strokeWidth="1.5" fill="none" />
+          <path d="M10 10 Q10 100 100 100 Q10 100 10 190" stroke="hsl(var(--gold))" strokeWidth="1.5" fill="none" />
+          <circle cx="100" cy="100" r="30" stroke="hsl(var(--gold))" strokeWidth="1" fill="none" />
+          <circle cx="100" cy="100" r="15" stroke="hsl(var(--gold))" strokeWidth="0.5" fill="none" />
         </svg>
       </motion.div>
 
@@ -25,10 +25,10 @@ const HeroSection = () => {
         className="absolute bottom-8 right-8 w-32 h-32 md:w-48 md:h-48 opacity-30 rotate-180"
       >
         <svg viewBox="0 0 200 200" fill="none" className="w-full h-full">
-          <path d="M10 10 Q100 10 100 100 Q100 10 190 10" stroke="hsl(var(--gold))" strokeWidth="1.5" fill="none"/>
-          <path d="M10 10 Q10 100 100 100 Q10 100 10 190" stroke="hsl(var(--gold))" strokeWidth="1.5" fill="none"/>
-          <circle cx="100" cy="100" r="30" stroke="hsl(var(--gold))" strokeWidth="1" fill="none"/>
-          <circle cx="100" cy="100" r="15" stroke="hsl(var(--gold))" strokeWidth="0.5" fill="none"/>
+          <path d="M10 10 Q100 10 100 100 Q100 10 190 10" stroke="hsl(var(--gold))" strokeWidth="1.5" fill="none" />
+          <path d="M10 10 Q10 100 100 100 Q10 100 10 190" stroke="hsl(var(--gold))" strokeWidth="1.5" fill="none" />
+          <circle cx="100" cy="100" r="30" stroke="hsl(var(--gold))" strokeWidth="1" fill="none" />
+          <circle cx="100" cy="100" r="15" stroke="hsl(var(--gold))" strokeWidth="0.5" fill="none" />
         </svg>
       </motion.div>
 
@@ -48,8 +48,8 @@ const HeroSection = () => {
               transform={`rotate(${i * 15} 250 250)`}
             />
           ))}
-          <circle cx="250" cy="250" r="100" fill="none" stroke="hsl(var(--gold))" strokeWidth="1"/>
-          <circle cx="250" cy="250" r="50" fill="none" stroke="hsl(var(--gold))" strokeWidth="0.5"/>
+          <circle cx="250" cy="250" r="100" fill="none" stroke="hsl(var(--gold))" strokeWidth="1" />
+          <circle cx="250" cy="250" r="50" fill="none" stroke="hsl(var(--gold))" strokeWidth="0.5" />
         </svg>
       </motion.div>
 
@@ -124,7 +124,7 @@ const HeroSection = () => {
           >
             <p className="font-body text-sm text-muted-foreground tracking-[0.2em] uppercase">Scroll</p>
             <svg width="20" height="30" viewBox="0 0 20 30" fill="none">
-              <rect x="1" y="1" width="18" height="28" rx="9" stroke="hsl(var(--gold))" strokeWidth="1.5"/>
+              <rect x="1" y="1" width="18" height="28" rx="9" stroke="hsl(var(--gold))" strokeWidth="1.5" />
               <motion.circle
                 animate={{ cy: [8, 18, 8] }}
                 transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}

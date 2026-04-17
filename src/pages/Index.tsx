@@ -15,7 +15,6 @@ import MusicPlayer from '@/components/wedding/MusicPlayer';
 const Index = () => {
   return (
     <>
-      <ScratchReveal />
       <FloatingParticles />
       <MusicPlayer />
 
@@ -23,8 +22,11 @@ const Index = () => {
         <HeroSection />
         <OrnamentalDivider variant="floral" />
 
-        <CountdownTimer />
+        <ScratchReveal />
         <OrnamentalDivider variant="wave" />
+
+        <CountdownTimer />
+        <OrnamentalDivider variant="dots" />
 
         <CoupleCarousel />
         <OrnamentalDivider variant="zigzag" />
