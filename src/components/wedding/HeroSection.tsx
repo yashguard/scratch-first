@@ -109,30 +109,6 @@ const HeroSection = () => {
         >
           at the celebration of their marriage
         </motion.p>
-
-        {/* Scroll indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 3.5, duration: 1 }}
-          className="mt-16"
-        >
-          <motion.div
-            animate={{ y: [0, 12, 0] }}
-            transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-            className="flex flex-col items-center gap-2"
-          >
-            <p className="font-body text-sm text-muted-foreground tracking-[0.2em] uppercase">Scroll</p>
-            <svg width="20" height="30" viewBox="0 0 20 30" fill="none">
-              <rect x="1" y="1" width="18" height="28" rx="9" stroke="hsl(var(--gold))" strokeWidth="1.5" />
-              <motion.circle
-                animate={{ cy: [8, 18, 8] }}
-                transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-                cx="10" r="3" fill="hsl(var(--gold))"
-              />
-            </svg>
-          </motion.div>
-        </motion.div>
       </div>
     </section>
   );

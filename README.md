@@ -1,3 +1,3 @@
-# Welcome to your Lovable project
+# Priya & Arjun — Wedding Invitation
 
-TODO: Document your project here
+A cinematic digital wedding invitation built with React, Vite, and Tailwind CSS.

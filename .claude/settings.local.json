@@ -4,7 +4,8 @@
       "WebFetch(domain:vintage-romance.vercel.app)",
       "Bash(npm install:*)",
       "Bash(npx vitest:*)",
-      "Bash(npx tsc:*)"
+      "Bash(npx tsc:*)",
+      "Bash(npm uninstall:*)"
     ]
   }
 }
