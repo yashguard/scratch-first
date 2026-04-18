@@ -8,7 +8,7 @@ import RSVPForm from '@/components/wedding/RSVPForm';
 import CalendarButton from '@/components/wedding/CalendarButton';
 import ThankYou from '@/components/wedding/ThankYou';
 import ContactFooter from '@/components/wedding/ContactFooter';
-import OrnamentalDivider from '@/components/wedding/OrnamentalDivider';
+import TornEdge from '@/components/wedding/TornEdge';
 import FloatingParticles from '@/components/wedding/FloatingParticles';
 import MusicPlayer from '@/components/wedding/MusicPlayer';
 
@@ -20,29 +20,29 @@ const Index = () => {
 
       <main className="relative">
         <HeroSection />
-        <OrnamentalDivider variant="floral" />
+        <TornEdge index={0} />
 
         <ScratchReveal />
-        <OrnamentalDivider variant="wave" />
+        <TornEdge index={1} />
 
         <CountdownTimer />
-        <OrnamentalDivider variant="dots" />
+        <TornEdge index={2} />
 
         <CoupleCarousel />
-        <OrnamentalDivider variant="zigzag" />
+        <TornEdge index={3} />
 
         <VenueSection />
-        <OrnamentalDivider variant="torn" />
+        <TornEdge index={4} />
 
         <Timeline />
-        <OrnamentalDivider variant="dots" />
+        <TornEdge index={5} />
 
         <RSVPForm />
         <CalendarButton />
-        <OrnamentalDivider variant="floral" />
+        <TornEdge index={6} />
 
         <ThankYou />
-        <OrnamentalDivider variant="wave" />
+        <TornEdge index={7} />
 
         <ContactFooter />
       </main>
