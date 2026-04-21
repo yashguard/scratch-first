@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import SectionTitle from './SectionTitle';
 import { useCountdown } from '@/hooks/useCountdown';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
@@ -114,68 +115,12 @@ const CountdownTimer = () => {
 
       <div className="max-w-4xl mx-auto text-center relative z-10">
 
-        {/* ── Standardised section-title pattern ─────────────────────────────
-            Reuse this exact block in every future section, changing only the
-            three text strings (label / heading / description).
-        ────────────────────────────────────────────────────────────────────── */}
-
-        {/* Ornament row */}
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.1 }}
-          className="flex items-center justify-center gap-3 mb-3"
-        >
-          <span style={{ flex: 1, maxWidth: '5rem', height: '1px', background: '#B8860B', display: 'block' }} />
-          <span className="font-body text-xs" style={{ color: '#B8860B' }}>✦</span>
-          <span style={{ flex: 1, maxWidth: '5rem', height: '1px', background: '#B8860B', display: 'block' }} />
-        </motion.div>
-
-        {/* Section label */}
-        <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.15 }}
-          className="font-body text-xs uppercase"
-          style={{ letterSpacing: '0.3em', color: 'rgba(212,175,55,0.75)', marginBottom: '0.5rem' }}
-        >
-          Shubh Muhurat
-        </motion.p>
-
-        {/* Main heading */}
-        <motion.h2
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.2 }}
-          className="font-heading"
-          style={{
-            fontSize: 'clamp(2rem, 5vw, 3.5rem)',
-            color: '#F5E8D0',
-            marginBottom: '1rem',
-          }}
-        >
-          Our Sacred Countdown
-        </motion.h2>
-
-        {/* Sub-description */}
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.3 }}
-          className="font-body mx-auto"
-          style={{
-            fontSize: 'clamp(0.85rem, 1.5vw, 1.1rem)',
-            color: 'rgba(245,232,208,0.65)',
-            maxWidth: '36rem',
-            marginBottom: '3rem',
-          }}
-        >
-          Every moment that passes brings us closer to our eternal union
-        </motion.p>
+        <SectionTitle
+          label="Shubh Muhurat"
+          heading="Our Sacred Countdown"
+          description="Every moment that passes brings us closer to our eternal union"
+          dark={true}
+        />
 
         {/* ── Countdown rings ─────────────────────────────────────────────── */}
         {isInView && (

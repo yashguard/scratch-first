@@ -149,3 +149,8 @@ html {
   animation: swing 3s ease-in-out infinite;
   transform-origin: top center;
 }
+
+@keyframes gallery-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}

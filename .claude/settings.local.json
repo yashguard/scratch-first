@@ -22,7 +22,8 @@
       "Read(//d//**)",
       "Bash(/c/Users/yashg/AppData/Local/Microsoft/WinGet/Packages/Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe/ffmpeg-8.1-full_build/bin/ffmpeg.exe -i D:/wedding/scratch-first/public/hero/door-to-invite-mobile.mp4 -vf fps=0.5 -frames:v 6 D:/wedding/scratch-first/public/hero/frame_%02d.jpg)",
       "Bash(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 \"D:/wedding/scratch-first/public/hero/door-to-invite-mobile.mp4\")",
-      "Bash(ffprobe -v error -select_streams v:0 -show_entries stream=width,height -of csv=s=x:p=0 \"D:/wedding/scratch-first/public/hero/door-to-invite-mobile.mp4\")"
+      "Bash(ffprobe -v error -select_streams v:0 -show_entries stream=width,height -of csv=s=x:p=0 \"D:/wedding/scratch-first/public/hero/door-to-invite-mobile.mp4\")",
+      "Bash(ffprobe -v error -show_streams -select_streams v:0 -show_entries stream=width,height,duration,r_frame_rate -of default \"C:/Users/yashg/Downloads/screen-capture.webm\")"
     ]
   }
 }
