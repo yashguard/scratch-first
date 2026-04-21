@@ -23,10 +23,10 @@ const Index = () => {
         {/* <TornEdge index={0} /> */}
 
         <ScratchReveal />
-        {/* <TornEdge index={1} />
+        {/* <TornEdge index={1} /> */}
 
         <CountdownTimer />
-        <TornEdge index={2} />
+        {/* <TornEdge index={2} />
 
         <CoupleCarousel />
         <TornEdge index={3} />
