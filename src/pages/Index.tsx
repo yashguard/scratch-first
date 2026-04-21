@@ -19,11 +19,11 @@ const Index = () => {
       <MusicPlayer />
 
       <main className="relative">
-        <HeroSection />
+        {/* <HeroSection /> */}
         {/* <TornEdge index={0} /> */}
 
-        {/* <ScratchReveal />
-        <TornEdge index={1} />
+        <ScratchReveal />
+        {/* <TornEdge index={1} />
 
         <CountdownTimer />
         <TornEdge index={2} />

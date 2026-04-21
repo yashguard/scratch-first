@@ -16,7 +16,7 @@ const HeroSection = () => {
 
   return (
     <section
-      className="relative overflow-hidden h-[100dvh] cursor-pointer select-none"
+      className="relative overflow-hidden h-[100dvh] select-none"
       onClick={handleTap}
     >
       {/* ── Video ───────────────────────────────────────────────────────────────
@@ -44,7 +44,7 @@ const HeroSection = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0, transition: { duration: 0.2 } }}
             transition={{ duration: 0.9 }}
-            className="absolute inset-0 z-20 pointer-events-none"
+            className="absolute inset-0 z-20 cursor-pointer"
           >
             {/* Icon group — pinned to door-knob focal point (x=50%, y≈45%) */}
             <motion.div
@@ -112,7 +112,7 @@ const HeroSection = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.55 }}
-            className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none"
+            className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none cursor-none"
           >
             <div className="text-center w-[58vw] md:w-[40vw]">
 
