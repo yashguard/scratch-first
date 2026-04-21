@@ -196,10 +196,11 @@ const CountdownTimer = () => {
         viewport={{ once: true }}
         transition={{ duration: 1, delay: 1.5 }}
         style={{
-          display: 'flex',
           justifyContent: 'center',
           marginTop: 'clamp(2rem, 5vw, 3.5rem)',
         }}
+        // className='hidden md:flex'
+        className='hidden'
       >
         <img
           src="/assets/diya-divider.png"

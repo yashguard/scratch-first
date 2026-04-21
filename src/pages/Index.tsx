@@ -26,10 +26,10 @@ const Index = () => {
         {/* <TornEdge index={1} /> */}
 
         <CountdownTimer />
-        {/* <TornEdge index={2} />
+        {/* <TornEdge index={2} /> */}
 
         <CoupleCarousel />
-        <TornEdge index={3} />
+        {/* <TornEdge index={3} />
 
         <VenueSection />
         <TornEdge index={4} />
