@@ -29,20 +29,20 @@ const Index = () => {
         {/* <TornEdge index={2} /> */}
 
         <CoupleCarousel />
-        {/* <TornEdge index={3} />
+        {/* <TornEdge index={3} /> */}
 
         <VenueSection />
-        <TornEdge index={4} />
+        {/* <TornEdge index={4} /> */}
 
-        <Timeline />
-        <TornEdge index={5} />
+        {/* <Timeline /> */}
+        {/* <TornEdge index={5} /> */}
 
         <RSVPForm />
         <CalendarButton />
-        <TornEdge index={6} />
+        {/* <TornEdge index={6} /> */}
 
         <ThankYou />
-        <TornEdge index={7} /> */}
+        {/* <TornEdge index={7} /> */}
 
         {/* <ContactFooter /> */}
       </main>
