@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { z } from 'zod';
 import { toast } from 'sonner';
+import SectionTitle from './SectionTitle';
 
 const rsvpSchema = z.object({
   name: z.string().trim().min(1, 'Name is required').max(100),
@@ -11,6 +12,29 @@ const rsvpSchema = z.object({
 });
 
 type RSVPData = z.infer<typeof rsvpSchema>;
+
+// ── Shared input style ────────────────────────────────────────────────────────
+const inputStyle: React.CSSProperties = {
+  width: '100%',
+  background: 'transparent',
+  borderBottom: '1px solid rgba(184,134,11,0.35)',
+  outline: 'none',
+  padding: '0.75rem 0',
+  fontFamily: 'inherit',
+  fontSize: '1rem',
+  color: '#2D0808',
+  transition: 'border-color 0.2s',
+};
+
+const labelStyle: React.CSSProperties = {
+  display: 'block',
+  fontFamily: 'inherit',
+  fontSize: '0.7rem',
+  letterSpacing: '0.25em',
+  textTransform: 'uppercase',
+  color: 'rgba(180,135,10,0.9)',
+  marginBottom: '0.5rem',
+};
 
 const RSVPForm = () => {
   const [form, setForm] = useState<RSVPData>({
@@ -35,7 +59,6 @@ const RSVPForm = () => {
       setErrors(fieldErrors);
       return;
     }
-    // Placeholder submit
     console.log('RSVP submitted:', result.data);
     setSubmitted(true);
     toast.success('Thank you for your RSVP!', {
@@ -45,17 +68,40 @@ const RSVPForm = () => {
     });
   };
 
+  const sectionStyle: React.CSSProperties = {
+    background: 'linear-gradient(160deg, #FAF3E0 0%, #F0E6C8 50%, #FAF3E0 100%)',
+  };
+
   if (submitted) {
     return (
-      <section className="py-24 md:py-32 px-4 bg-background">
+      <section
+        className="relative py-24 md:py-32 px-4 overflow-hidden"
+        style={sectionStyle}
+      >
+        {/* Mehndi dot texture */}
+        <div
+          aria-hidden="true"
+          style={{
+            position: 'absolute', inset: 0, opacity: 0.06, pointerEvents: 'none',
+            backgroundImage: 'radial-gradient(circle, #B8860B 1px, transparent 1px)',
+            backgroundSize: '28px 28px',
+          }}
+        />
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          className="max-w-lg mx-auto text-center"
+          className="max-w-lg mx-auto text-center relative z-10"
         >
-          <p className="text-4xl mb-4">💌</p>
-          <h2 className="font-heading text-3xl md:text-4xl text-foreground mb-4">Response Received</h2>
-          <p className="font-body text-xl text-muted-foreground">
+          {/* Gold ornament */}
+          <div className="flex items-center justify-center gap-3 mb-6">
+            <span style={{ flex: 1, maxWidth: '5rem', height: '1px', background: '#B8860B', display: 'block' }} />
+            <span className="font-body text-xs" style={{ color: '#B8860B' }}>✦</span>
+            <span style={{ flex: 1, maxWidth: '5rem', height: '1px', background: '#B8860B', display: 'block' }} />
+          </div>
+          <h2 className="font-heading mb-4" style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', color: '#2D0808' }}>
+            Response Received
+          </h2>
+          <p className="font-body" style={{ fontSize: '1.1rem', color: 'rgba(45,8,8,0.65)', lineHeight: 1.7 }}>
             {form.attendance === 'accept'
               ? 'We are overjoyed and look forward to celebrating with you!'
               : 'We understand and will miss your presence dearly.'}
@@ -66,121 +112,178 @@ const RSVPForm = () => {
   }
 
   return (
-    <section className="py-24 md:py-32 px-4 bg-background relative overflow-hidden">
-      <div className="max-w-xl mx-auto">
-        <div className="text-center mb-12">
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="font-body text-lg text-muted-foreground tracking-[0.3em] uppercase mb-4"
-          >
-            Kindly Respond
-          </motion.p>
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="font-heading text-4xl md:text-5xl text-foreground"
-          >
-            RSVP
-          </motion.h2>
+    <section
+      className="relative py-24 md:py-32 px-4 overflow-hidden"
+      style={sectionStyle}
+    >
+      {/* Mehndi dot texture */}
+      <div
+        aria-hidden="true"
+        style={{
+          position: 'absolute', inset: 0, opacity: 0.06, pointerEvents: 'none',
+          backgroundImage: 'radial-gradient(circle, #B8860B 1px, transparent 1px)',
+          backgroundSize: '28px 28px',
+        }}
+      />
+
+      <div className="max-w-xl mx-auto relative z-10">
+
+        {/* Section title */}
+        <div className="text-center">
+          <SectionTitle
+            label="Pratiksha"
+            heading="RSVP"
+            description="Please let us know if you will be joining us to celebrate our union"
+            dark={false}
+          />
         </div>
 
+        {/* ── Form card ─────────────────────────────────────────────────────── */}
         <motion.form
           onSubmit={handleSubmit}
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 32 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.3, duration: 0.8 }}
-          className="bg-card rounded-2xl border border-gold/30 p-8 md:p-12 shadow-lg space-y-8"
+          transition={{ delay: 0.35, duration: 0.8 }}
+          style={{
+            background: 'rgba(255,255,255,0.55)',
+            border: '1px solid rgba(184,134,11,0.25)',
+            borderRadius: '16px',
+            padding: 'clamp(2rem, 5vw, 3rem)',
+            backdropFilter: 'blur(6px)',
+          }}
         >
-          {/* Name */}
-          <div>
-            <label className="font-body text-sm text-muted-foreground tracking-[0.2em] uppercase block mb-2">
-              Your Name
-            </label>
-            <input
-              type="text"
-              value={form.name}
-              onChange={e => handleChange('name', e.target.value)}
-              className="w-full bg-transparent border-b-2 border-border focus:border-primary outline-none py-3 font-body text-lg text-foreground transition-colors placeholder:text-muted-foreground/50"
-              placeholder="Full Name"
-            />
-            {errors.name && <p className="font-body text-sm text-destructive mt-1">{errors.name}</p>}
-          </div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
 
-          {/* Email */}
-          <div>
-            <label className="font-body text-sm text-muted-foreground tracking-[0.2em] uppercase block mb-2">
-              Email Address
-            </label>
-            <input
-              type="email"
-              value={form.email}
-              onChange={e => handleChange('email', e.target.value)}
-              className="w-full bg-transparent border-b-2 border-border focus:border-primary outline-none py-3 font-body text-lg text-foreground transition-colors placeholder:text-muted-foreground/50"
-              placeholder="your@email.com"
-            />
-            {errors.email && <p className="font-body text-sm text-destructive mt-1">{errors.email}</p>}
-          </div>
-
-          {/* Phone */}
-          <div>
-            <label className="font-body text-sm text-muted-foreground tracking-[0.2em] uppercase block mb-2">
-              Phone Number
-            </label>
-            <input
-              type="tel"
-              value={form.phone}
-              onChange={e => handleChange('phone', e.target.value)}
-              className="w-full bg-transparent border-b-2 border-border focus:border-primary outline-none py-3 font-body text-lg text-foreground transition-colors placeholder:text-muted-foreground/50"
-              placeholder="+91 XXXXX XXXXX"
-            />
-            {errors.phone && <p className="font-body text-sm text-destructive mt-1">{errors.phone}</p>}
-          </div>
-
-          {/* Attendance */}
-          <div>
-            <label className="font-body text-sm text-muted-foreground tracking-[0.2em] uppercase block mb-4">
-              Will You Be Joining Us?
-            </label>
-            <div className="flex gap-4">
-              <button
-                type="button"
-                onClick={() => handleChange('attendance', 'accept')}
-                className={`flex-1 py-4 rounded-xl border-2 font-body text-lg transition-all ${
-                  form.attendance === 'accept'
-                    ? 'border-primary bg-primary/10 text-foreground'
-                    : 'border-border text-muted-foreground hover:border-primary/50'
-                }`}
-              >
-                Joyfully Accept
-              </button>
-              <button
-                type="button"
-                onClick={() => handleChange('attendance', 'decline')}
-                className={`flex-1 py-4 rounded-xl border-2 font-body text-lg transition-all ${
-                  form.attendance === 'decline'
-                    ? 'border-accent bg-accent/10 text-foreground'
-                    : 'border-border text-muted-foreground hover:border-accent/50'
-                }`}
-              >
-                Regretfully Decline
-              </button>
+            {/* Name */}
+            <div>
+              <label style={labelStyle}>Your Name</label>
+              <input
+                type="text"
+                value={form.name}
+                onChange={e => handleChange('name', e.target.value)}
+                placeholder="Full Name"
+                style={inputStyle}
+                className="font-body placeholder:text-[rgba(45,8,8,0.5)] focus:border-b-[#B8860B]"
+              />
+              {errors.name && (
+                <p className="font-body text-xs mt-1" style={{ color: '#8B0000' }}>{errors.name}</p>
+              )}
             </div>
-            {errors.attendance && <p className="font-body text-sm text-destructive mt-1">{errors.attendance}</p>}
-          </div>
 
-          <motion.button
-            type="submit"
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            className="w-full py-4 bg-primary text-primary-foreground rounded-xl font-heading text-lg tracking-wider hover:opacity-90 transition-opacity"
-          >
-            Send Response
-          </motion.button>
+            {/* Email */}
+            <div>
+              <label style={labelStyle}>Email Address</label>
+              <input
+                type="email"
+                value={form.email}
+                onChange={e => handleChange('email', e.target.value)}
+                placeholder="your@email.com"
+                style={inputStyle}
+                className="font-body placeholder:text-[rgba(45,8,8,0.5)]"
+              />
+              {errors.email && (
+                <p className="font-body text-xs mt-1" style={{ color: '#8B0000' }}>{errors.email}</p>
+              )}
+            </div>
+
+            {/* Phone */}
+            <div>
+              <label style={labelStyle}>Phone Number</label>
+              <input
+                type="tel"
+                value={form.phone}
+                onChange={e => handleChange('phone', e.target.value)}
+                placeholder="+91 XXXXX XXXXX"
+                style={inputStyle}
+                className="font-body placeholder:text-[rgba(45,8,8,0.5)]"
+              />
+              {errors.phone && (
+                <p className="font-body text-xs mt-1" style={{ color: '#8B0000' }}>{errors.phone}</p>
+              )}
+            </div>
+
+            {/* Attendance */}
+            <div>
+              <label style={labelStyle}>Will You Be Joining Us?</label>
+              <div style={{ display: 'flex', gap: '1rem' }}>
+                {/* Joyfully Accept */}
+                <button
+                  type="button"
+                  onClick={() => handleChange('attendance', 'accept')}
+                  style={{
+                    flex: 1,
+                    padding: '1rem',
+                    border: form.attendance === 'accept'
+                      ? '1.5px solid rgba(184,134,11,0.75)'
+                      : '1.5px solid rgba(184,134,11,0.25)',
+                    borderRadius: '10px',
+                    background: form.attendance === 'accept'
+                      ? 'rgba(184,134,11,0.1)'
+                      : 'transparent',
+                    color: form.attendance === 'accept' ? '#2D0808' : 'rgba(45,8,8,0.45)',
+                    fontFamily: 'inherit',
+                    fontSize: '0.9rem',
+                    cursor: 'pointer',
+                    transition: 'all 0.2s',
+                    letterSpacing: '0.04em',
+                  }}
+                  className="font-body"
+                >
+                  Joyfully Accept
+                </button>
+
+                {/* Regretfully Decline */}
+                <button
+                  type="button"
+                  onClick={() => handleChange('attendance', 'decline')}
+                  style={{
+                    flex: 1,
+                    padding: '1rem',
+                    border: form.attendance === 'decline'
+                      ? '1.5px solid rgba(139,0,0,0.55)'
+                      : '1.5px solid rgba(184,134,11,0.25)',
+                    borderRadius: '10px',
+                    background: form.attendance === 'decline'
+                      ? 'rgba(139,0,0,0.07)'
+                      : 'transparent',
+                    color: form.attendance === 'decline' ? '#2D0808' : 'rgba(45,8,8,0.45)',
+                    fontFamily: 'inherit',
+                    fontSize: '0.9rem',
+                    cursor: 'pointer',
+                    transition: 'all 0.2s',
+                    letterSpacing: '0.04em',
+                  }}
+                  className="font-body"
+                >
+                  Regretfully Decline
+                </button>
+              </div>
+            </div>
+
+            {/* Submit */}
+            <motion.button
+              type="submit"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="font-body uppercase"
+              style={{
+                width: '100%',
+                padding: '1rem',
+                background: 'linear-gradient(135deg, #3A0C0C 0%, #2D0808 100%)',
+                color: '#FFFFFF',
+                border: '1px solid rgba(212,175,55,0.35)',
+                borderRadius: '100px',
+                fontSize: '0.78rem',
+                letterSpacing: '0.22em',
+                cursor: 'pointer',
+                transition: 'opacity 0.2s',
+              }}
+            >
+              Send Response
+            </motion.button>
+
+          </div>
         </motion.form>
       </div>
     </section>
