@@ -29,7 +29,7 @@ const ThankYou = () => {
           style={{ marginBottom: '2rem' }}
         >
           <img
-            src="/assets/radha-krishna.png"
+            src="/assets/radha-krishna.webp"
             alt="Radha Krishna — Divine Blessing"
             style={{
               width: 'min(65vw, 300px)',

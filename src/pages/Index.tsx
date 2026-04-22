@@ -9,7 +9,6 @@ import Timeline from '@/components/wedding/Timeline';
 import RSVPForm from '@/components/wedding/RSVPForm';
 import CalendarButton from '@/components/wedding/CalendarButton';
 import ThankYou from '@/components/wedding/ThankYou';
-import ContactFooter from '@/components/wedding/ContactFooter';
 import TornEdge from '@/components/wedding/TornEdge';
 import FloatingParticles from '@/components/wedding/FloatingParticles';
 import MusicPlayer from '@/components/wedding/MusicPlayer';

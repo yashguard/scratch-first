@@ -80,7 +80,7 @@ const VenueSection = () => {
           transition={{ delay: 0.35, duration: 0.9 }}
         >
           <img
-            src="/assets/venue-illustration.png"
+            src="/assets/venue-illustration.webp"
             alt="Summer Palace — Our Wedding Venue"
             style={{
               width: '100%',

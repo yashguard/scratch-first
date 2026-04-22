@@ -148,7 +148,7 @@ const CountdownTimer = () => {
         className='hidden'
       >
         <img
-          src="/assets/diya-divider.png"
+          src="/assets/diya-divider.webp"
           alt="decorative diyas"
           style={{
             width: 'min(88vw, 680px)',

@@ -34,7 +34,7 @@ const HeroSection = ({ onComplete }: HeroSectionProps) => {
         playsInline
         {...{ 'webkit-playsinline': 'true' }}
         preload="auto"
-        poster="/hero/door-to-invite-poster.jpg"
+        poster="/hero/main-door.webp"
         onEnded={() => {
           setPhase('ended');
           onComplete();
@@ -141,7 +141,7 @@ const HeroSection = ({ onComplete }: HeroSectionProps) => {
                 style={{ marginBottom: '0.6rem' }}
               >
                 <img
-                  src="/hero/ganesh.png"
+                  src="/hero/ganesh.webp"
                   alt="Shree Ganesh"
                   style={{ width: '28%', height: 'auto', display: 'block', margin: '0 auto' }}
                 />
