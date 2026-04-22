@@ -11,6 +11,7 @@ const SPEED_DESKTOP = 0.6;   // px per frame at ~60fps
 const SPEED_MOBILE = 1.1;   // px per frame at ~60fps
 const MOBILE_BREAKPOINT = 768; // px
 
+
 const GALLERY_PHOTOS = [
   {
     src: 'https://images.pexels.com/photos/19733687/pexels-photo-19733687.jpeg?auto=compress&cs=tinysrgb&w=420&h=600&fit=crop',
