@@ -3,7 +3,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 type Phase = 'idle' | 'playing' | 'ended';
 
-const HeroSection = () => {
+interface HeroSectionProps {
+  onComplete: () => void;
+}
+
+const HeroSection = ({ onComplete }: HeroSectionProps) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [phase, setPhase] = useState<Phase>('idle');
 
@@ -18,6 +22,7 @@ const HeroSection = () => {
     <section
       className="relative overflow-hidden h-[100dvh] select-none"
       onClick={handleTap}
+      style={{ willChange: 'transform', transform: 'translateZ(0)' }}
     >
       {/* ── Video ───────────────────────────────────────────────────────────────
           poster= shows the first frame (doors closed) the instant the page loads
@@ -27,10 +32,21 @@ const HeroSection = () => {
         ref={videoRef}
         muted
         playsInline
+        {...{ 'webkit-playsinline': 'true' }}
         preload="auto"
         poster="/hero/door-to-invite-poster.jpg"
-        onEnded={() => setPhase('ended')}
+        onEnded={() => {
+          setPhase('ended');
+          onComplete();
+        }}
         className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+        style={{
+          transform: 'translate3d(0, 0, 0)',
+          WebkitTransform: 'translate3d(0, 0, 0)',
+          backfaceVisibility: 'hidden',
+          WebkitBackfaceVisibility: 'hidden',
+          willChange: 'transform',
+        }}
       >
         <source src="/hero/door-to-invite-mobile.mp4" type="video/mp4" />
       </video>

@@ -1,3 +1,5 @@
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import HeroSection from '@/components/wedding/HeroSection';
 import ScratchReveal from '@/components/wedding/ScratchReveal';
 import CountdownTimer from '@/components/wedding/CountdownTimer';
@@ -13,37 +15,44 @@ import FloatingParticles from '@/components/wedding/FloatingParticles';
 import MusicPlayer from '@/components/wedding/MusicPlayer';
 
 const Index = () => {
+  const [heroComplete, setHeroComplete] = useState(false);
+
+  useEffect(() => {
+    // Always start from top on load/refresh — disable browser scroll restoration
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+    window.scrollTo({ top: 0, behavior: 'instant' as ScrollBehavior });
+  }, []);
+
   return (
     <>
       <FloatingParticles />
-      <MusicPlayer />
+      <MusicPlayer canPlay={heroComplete} />
 
       <main className="relative">
-        {/* <HeroSection /> */}
+        <HeroSection onComplete={() => setHeroComplete(true)} />
         {/* <TornEdge index={0} /> */}
 
-        <ScratchReveal />
-        {/* <TornEdge index={1} /> */}
-
-        <CountdownTimer />
-        {/* <TornEdge index={2} /> */}
-
-        <CoupleCarousel />
-        {/* <TornEdge index={3} /> */}
-
-        <VenueSection />
-        {/* <TornEdge index={4} /> */}
-
-        <Timeline />
-        {/* <TornEdge index={5} /> */}
-
-        <RSVPForm />
-        <CalendarButton />
-        {/* <TornEdge index={6} /> */}
-
-        <ThankYou />
-        {/* <TornEdge index={7} /> */}
-
+        <AnimatePresence>
+          {heroComplete && (
+            <motion.div
+              key="main-sections"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.7, ease: 'easeOut' }}
+            >
+              <ScratchReveal />
+              <CountdownTimer />
+              <CoupleCarousel />
+              <VenueSection />
+              <Timeline />
+              <RSVPForm />
+              <CalendarButton />
+              <ThankYou />
+            </motion.div>
+          )}
+        </AnimatePresence>
       </main>
     </>
   );

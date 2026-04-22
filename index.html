@@ -2,13 +2,25 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0" />
+    <!-- Mobile web app -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Priya &amp; Arjun" />
+    <meta name="theme-color" content="#2D0808" />
+    <meta name="msapplication-TileColor" content="#2D0808" />
+    <!-- Prevent iOS number detection -->
+    <meta name="format-detection" content="telephone=no" />
     <title>Priya &amp; Arjun — Wedding Invitation</title>
     <meta name="description" content="Join us in celebrating the union of Priya &amp; Arjun. A cinematic digital wedding invitation.">
     <meta name="author" content="Priya & Arjun" />
     
     
     <meta property="og:type" content="website" />
+    <!-- Preload above-fold critical assets -->
+    <link rel="preload" as="image" href="/hero/door-to-invite-poster.jpg" fetchpriority="high" />
+    <link rel="preload" as="image" href="/hero/ganesh.png" fetchpriority="high" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
