@@ -13,35 +13,35 @@ const MOBILE_BREAKPOINT = 768; // px
 
 const GALLERY_PHOTOS = [
   {
-    src: 'https://images.pexels.com/photos/19733687/pexels-photo-19733687.jpeg?auto=compress&cs=tinysrgb&w=420&h=600&fit=crop',
+    src: '/gallery/pexels-photo-19733687.webp',
     alt: 'Indian wedding couple portrait, Surat',
   },
   {
-    src: 'https://images.pexels.com/photos/36836726/pexels-photo-36836726.jpeg?auto=compress&cs=tinysrgb&w=420&h=600&fit=crop',
+    src: '/gallery/pexels-photo-36836726.webp',
     alt: 'Indian wedding couple under mandap',
   },
   {
-    src: 'https://images.pexels.com/photos/36098383/pexels-photo-36098383.jpeg?auto=compress&cs=tinysrgb&w=420&h=600&fit=crop',
+    src: '/gallery/pexels-photo-36098383.webp',
     alt: 'Vibrant Indian wedding couple in traditional attire',
   },
   {
-    src: 'https://images.pexels.com/photos/30171219/pexels-photo-30171219.jpeg?auto=compress&cs=tinysrgb&w=420&h=600&fit=crop',
+    src: '/gallery/pexels-photo-30171219.webp',
     alt: 'Traditional Indian wedding ceremony portrait',
   },
   {
-    src: 'https://images.pexels.com/photos/19230329/pexels-photo-19230329.jpeg?auto=compress&cs=tinysrgb&w=420&h=600&fit=crop',
+    src: '/gallery/pexels-photo-19230329.webp',
     alt: 'Bengali couple at Indian wedding ceremony',
   },
   {
-    src: 'https://images.pexels.com/photos/34479834/pexels-photo-34479834.jpeg?auto=compress&cs=tinysrgb&w=420&h=600&fit=crop',
+    src: '/gallery/pexels-photo-34479834.webp',
     alt: 'Beautiful Indian wedding couple in traditional attire',
   },
   {
-    src: 'https://images.pexels.com/photos/28210870/pexels-photo-28210870.jpeg?auto=compress&cs=tinysrgb&w=420&h=600&fit=crop',
+    src: '/gallery/pexels-photo-28210870.webp',
     alt: 'Bride and groom in traditional Indian attire',
   },
   {
-    src: 'https://images.pexels.com/photos/7694286/pexels-photo-7694286.jpeg?auto=compress&cs=tinysrgb&w=420&h=600&fit=crop',
+    src: '/gallery/pexels-photo-7694286.webp',
     alt: 'South Indian couple in traditional wedding attire',
   },
 ];
