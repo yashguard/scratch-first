@@ -27,7 +27,8 @@
       "Bash(ffprobe -v quiet -print_format json -show_format -show_streams \"D:/wedding/scratch-first/public/hero/door-to-invite-mobile.mp4\")",
       "WebSearch",
       "WebFetch(domain:unsplash.com)",
-      "WebFetch(domain:www.pexels.com)"
+      "WebFetch(domain:www.pexels.com)",
+      "Bash(ffprobe -v quiet -print_format json -show_streams -show_format \"D:/wedding/door-to-invite/public/hero/door-to-invite-mobile.mp4\")"
     ]
   }
 }

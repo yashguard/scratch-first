@@ -65,7 +65,7 @@ const HeroSection = ({ onComplete }: HeroSectionProps) => {
             {/* Icon group — pinned to door-knob focal point (x=50%, y≈45%) */}
             <motion.div
               className="absolute left-1/2 flex flex-col items-center gap-2 sm:gap-3"
-              style={{ top: '53%', left: '51%', transform: 'translate(-50%, -50%)' }}
+              style={{ top: '55%', left: '50%', transform: 'translate(-50%, -50%)' }}
               animate={{ opacity: [0.65, 1, 0.65] }}
               transition={{ duration: 3.2, repeat: Infinity, ease: 'easeInOut' }}
             >
