@@ -52,7 +52,7 @@ const ThankYou = () => {
           className="font-heading italic mb-5"
           style={{
             fontSize: 'clamp(0.9rem, 2vw, 1.1rem)',
-            color: '#B8860B',
+            color: '#7A1F1F',
             letterSpacing: '0.12em',
           }}
         >
@@ -98,11 +98,11 @@ const ThankYou = () => {
         >
           <p
             className="font-body uppercase mb-3"
-            style={{ fontSize: '0.68rem', letterSpacing: '0.3em', color: 'rgba(180,135,10,0.8)' }}
+            style={{ fontSize: 'clamp(0.72rem, 1.1vw, 0.9rem)', letterSpacing: '0.3em', color: '#7A1F1F' }}
           >
             For Any Queries
           </p>
-          <p className="font-body" style={{ fontSize: '0.95rem', color: 'rgba(45,8,8,0.7)', lineHeight: 1.8 }}>
+          <p className="font-body" style={{ fontSize: 'clamp(0.95rem, 1.4vw, 1.15rem)', color: 'rgba(45,8,8,0.85)', lineHeight: 1.8 }}>
             Arjun · <a href="tel:+919876543210" className="font-sans tracking-wide">+91 98765 43210</a>
             <br />
             Priya · <a href="tel:+919876543211" className="font-sans tracking-wide">+91 98765 43211</a>
@@ -117,9 +117,9 @@ const ThankYou = () => {
           transition={{ delay: 0.65 }}
           className="flex items-center justify-center gap-4 mb-8"
         >
-          <span style={{ flex: 1, maxWidth: '4rem', height: '1px', background: 'rgba(184,134,11,0.3)', display: 'block' }} />
-          <span className="font-body text-xs" style={{ color: 'rgba(184,134,11,0.5)' }}>✦</span>
-          <span style={{ flex: 1, maxWidth: '4rem', height: '1px', background: 'rgba(184,134,11,0.3)', display: 'block' }} />
+          <span style={{ flex: 1, maxWidth: '4rem', height: '1px', background: 'rgba(184,134,11,0.65)', display: 'block' }} />
+          <span className="font-body text-xs" style={{ color: 'rgba(184,134,11,0.85)' }}>✦</span>
+          <span style={{ flex: 1, maxWidth: '4rem', height: '1px', background: 'rgba(184,134,11,0.65)', display: 'block' }} />
         </motion.div>
 
         {/* ── Sanskrit shloka ───────────────────────────────────────────────── */}
@@ -130,8 +130,8 @@ const ThankYou = () => {
           transition={{ delay: 0.75 }}
           className="font-heading italic"
           style={{
-            fontSize: 'clamp(0.85rem, 1.8vw, 1rem)',
-            color: 'rgba(45,8,8,0.45)',
+            fontSize: 'clamp(0.95rem, 1.8vw, 1.15rem)',
+            color: 'rgba(45,8,8,0.82)',
             lineHeight: 1.9,
             maxWidth: '28rem',
             margin: '0 auto',
@@ -139,7 +139,7 @@ const ThankYou = () => {
         >
           सप्तपदी — सात फेरों का वचन
           <br />
-          <span style={{ fontSize: '0.8em', letterSpacing: '0.04em' }}>
+          <span style={{ fontSize: '0.88em', letterSpacing: '0.04em' }}>
             "एक दूजे के साथ, सात जन्मों तक"
           </span>
         </motion.p>

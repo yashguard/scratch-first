@@ -64,8 +64,8 @@ const CircleUnit = ({ value, label, max, delay }: { value: number; label: string
 
       {/* Unit label */}
       <p
-        className="font-body uppercase mt-3 text-xs"
-        style={{ letterSpacing: '0.25em', color: 'rgba(212,175,55,0.8)' }}
+        className="font-body uppercase mt-3"
+        style={{ letterSpacing: '0.25em', color: 'rgba(212,175,55,0.8)', fontSize: 'clamp(0.72rem, 1.1vw, 0.9rem)' }}
       >
         {label}
       </p>

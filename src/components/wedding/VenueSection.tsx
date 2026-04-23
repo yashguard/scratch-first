@@ -116,8 +116,8 @@ const VenueSection = () => {
             >
               {/* Card label */}
               <p
-                className="font-body text-xs uppercase mb-2"
-                style={{ letterSpacing: '0.3em', color: 'rgba(212,175,55,0.65)' }}
+                className="font-body uppercase mb-2"
+                style={{ letterSpacing: '0.3em', color: 'rgba(212,175,55,0.65)', fontSize: 'clamp(0.68rem, 1vw, 0.82rem)' }}
               >
                 {label}
               </p>
@@ -135,15 +135,15 @@ const VenueSection = () => {
               {/* Card title */}
               <p
                 className="font-heading mb-1"
-                style={{ fontSize: 'clamp(0.95rem, 2vw, 1.1rem)', color: '#F5E8D0' }}
+                style={{ fontSize: 'clamp(1rem, 2vw, 1.45rem)', color: '#F5E8D0' }}
               >
                 {title}
               </p>
 
               {/* Card detail */}
               <p
-                className="font-body text-xs"
-                style={{ color: 'rgba(245,232,208,0.45)', letterSpacing: '0.05em' }}
+                className="font-body"
+                style={{ color: 'rgba(245,232,208,0.72)', letterSpacing: '0.05em', fontSize: 'clamp(0.75rem, 1.1vw, 0.9rem)' }}
               >
                 {detail}
               </p>
@@ -199,7 +199,7 @@ const VenueSection = () => {
               borderRadius: '100px',
               background: 'rgba(212,175,55,0.07)',
               color: '#D4AF37',
-              fontSize: '0.78rem',
+              fontSize: 'clamp(0.78rem, 1vw, 0.92rem)',
               letterSpacing: '0.22em',
               textDecoration: 'none',
               transition: 'background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease',

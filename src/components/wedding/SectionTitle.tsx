@@ -10,12 +10,12 @@ interface SectionTitleProps {
 
 const SectionTitle = ({ label, heading, description, className, dark = true }: SectionTitleProps) => {
   const headingColor = dark ? '#F5E8D0' : '#2D0808';
-  const descriptionColor = dark ? 'rgba(245,232,208,0.65)' : 'rgba(45,8,8,0.6)';
-  const labelColor = dark ? 'rgba(212,175,55,0.75)' : 'rgba(180,135,10,0.9)';
+  const descriptionColor = dark ? 'rgba(245,232,208,0.88)' : 'rgba(45,8,8,0.88)';
+  const labelColor = dark ? 'rgba(212,175,55,0.85)' : '#7A1F1F';
   const lineColor = '#B8860B';
 
   return (
-    <div className={className}>
+    <div className={`text-center ${className}`}>
       {/* Ornament row */}
       <motion.div
         initial={{ opacity: 0, y: 12 }}
@@ -35,8 +35,8 @@ const SectionTitle = ({ label, heading, description, className, dark = true }: S
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay: 0.15 }}
-        className="font-body text-xs text-center uppercase"
-        style={{ letterSpacing: '0.3em', color: labelColor, marginBottom: '0.5rem' }}
+        className="font-body text-center uppercase"
+        style={{ letterSpacing: '0.3em', color: labelColor, marginBottom: '0.5rem', fontSize: 'clamp(0.72rem, 1.1vw, 0.9rem)' }}
       >
         {label}
       </motion.p>
@@ -65,7 +65,7 @@ const SectionTitle = ({ label, heading, description, className, dark = true }: S
         transition={{ delay: 0.3 }}
         className="font-body mx-auto"
         style={{
-          fontSize: 'clamp(0.85rem, 1.5vw, 1.1rem)',
+          fontSize: 'clamp(0.95rem, 1.5vw, 1.3rem)',
           color: descriptionColor,
           maxWidth: '36rem',
           marginBottom: '3rem',

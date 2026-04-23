@@ -58,7 +58,7 @@ const CalendarButton = () => {
         {/* Label */}
         <p
           className="font-body uppercase mb-3"
-          style={{ fontSize: '0.7rem', letterSpacing: '0.3em', color: 'rgba(212,175,55,0.75)' }}
+          style={{ fontSize: 'clamp(0.72rem, 1.1vw, 0.9rem)', letterSpacing: '0.3em', color: 'rgba(212,175,55,1)' }}
         >
           Yaad Rakhein
         </p>
@@ -80,7 +80,7 @@ const CalendarButton = () => {
         {/* Date reminder */}
         <p
           className="font-body mb-8"
-          style={{ fontSize: '0.9rem', color: 'rgba(245,232,208,0.6)', letterSpacing: '0.08em' }}
+          style={{ fontSize: 'clamp(0.95rem, 1.4vw, 1.2rem)', color: 'rgba(245,232,208,0.92)', letterSpacing: '0.08em' }}
         >
           December 15, 2026 · 10:00 AM Onwards · Summer Palace, Surat
         </p>
@@ -99,7 +99,7 @@ const CalendarButton = () => {
             borderRadius: '100px',
             background: 'rgba(212,175,55,0.07)',
             color: '#D4AF37',
-            fontSize: '0.78rem',
+            fontSize: 'clamp(0.78rem, 1vw, 0.92rem)',
             letterSpacing: '0.22em',
             textDecoration: 'none',
             transition: 'background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease',

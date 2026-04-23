@@ -51,17 +51,7 @@ const ScratchCard = ({ label, onRevealed, children }: ScratchCardProps) => {
     ctx.fillStyle = grad;
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    // Mehndi-inspired dot pattern (small arcs)
-    const spacing = 18;
-    for (let row = spacing / 2; row < canvas.height; row += spacing) {
-      for (let col = spacing / 2; col < canvas.width; col += spacing) {
-        const r = 2 + Math.random() * 2;
-        ctx.beginPath();
-        ctx.arc(col, row, r, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(255,255,255,0.18)';
-        ctx.fill();
-      }
-    }
+
 
     // Subtle gold inner glow ring along heart outline
     ctx.strokeStyle = 'rgba(255,255,255,0.3)';
@@ -191,19 +181,7 @@ const ScratchCard = ({ label, onRevealed, children }: ScratchCardProps) => {
           padding: '16px',
         }}
       >
-        <AnimatePresence>
-          {revealed && (
-            <motion.div
-              key="content"
-              initial={{ opacity: 0, scale: 0.85 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, ease: 'easeOut' }}
-              style={{ textAlign: 'center', width: '100%' }}
-            >
-              {children}
-            </motion.div>
-          )}
-        </AnimatePresence>
+        {children}
       </div>
 
       {/* Gold foil scratch canvas */}
@@ -309,8 +287,8 @@ const ScratchReveal = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
-          className="font-body text-sm tracking-wider text-center"
-          style={{ color: '#7A1F1F', marginBottom: '2.5rem' }}
+          className="font-body tracking-wider text-center"
+          style={{ color: '#7A1F1F', marginBottom: '2.5rem', fontSize: 'clamp(0.85rem, 1.4vw, 1.1rem)' }}
         >
           Scratch each seal to reveal the date of our union
         </motion.p>

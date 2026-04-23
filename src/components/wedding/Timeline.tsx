@@ -275,7 +275,7 @@ const Timeline = () => {
             >
               <p style={{
                 fontFamily: "'Playfair Display', serif",
-                fontSize: 'clamp(1.05rem, 2.8vw, 1.25rem)',
+                fontSize: 'clamp(1.1rem, 2.5vw, 1.55rem)',
                 fontStyle: 'italic',
                 fontWeight: 400,
                 color: '#2D0808',
@@ -327,7 +327,7 @@ const Timeline = () => {
                       <p style={{
                         flex: 1,
                         fontFamily: "'Cormorant Garamond', serif",
-                        fontSize: 'clamp(0.9rem, 2.2vw, 1rem)',
+                        fontSize: 'clamp(0.95rem, 1.8vw, 1.2rem)',
                         fontWeight: 600,
                         color: '#2D0808',
                         margin: 0,
@@ -342,8 +342,8 @@ const Timeline = () => {
                       <p style={{
                         flexShrink: 0,
                         fontFamily: "'Cormorant Garamond', serif",
-                        fontSize: 'clamp(0.8rem, 1.9vw, 0.88rem)',
-                        color: 'rgba(45,8,8,0.52)',
+                        fontSize: 'clamp(0.8rem, 1.4vw, 1rem)',
+                        color: 'rgba(45,8,8,0.68)',
                         margin: 0,
                         whiteSpace: 'nowrap',
                         letterSpacing: '0.03em',

@@ -17,7 +17,7 @@ type RSVPData = z.infer<typeof rsvpSchema>;
 const inputStyle: React.CSSProperties = {
   width: '100%',
   background: 'transparent',
-  borderBottom: '1px solid rgba(184,134,11,0.35)',
+  borderBottom: '1px solid rgba(184,134,11,0.6)',
   outline: 'none',
   padding: '0.75rem 0',
   fontFamily: 'inherit',
@@ -29,10 +29,10 @@ const inputStyle: React.CSSProperties = {
 const labelStyle: React.CSSProperties = {
   display: 'block',
   fontFamily: 'inherit',
-  fontSize: '0.7rem',
+  fontSize: 'clamp(0.7rem, 0.9vw, 0.82rem)',
   letterSpacing: '0.25em',
   textTransform: 'uppercase',
-  color: 'rgba(180,135,10,0.9)',
+  color: '#7A1F1F',
   marginBottom: '0.5rem',
 };
 
@@ -146,8 +146,8 @@ const RSVPForm = () => {
           viewport={{ once: true }}
           transition={{ delay: 0.35, duration: 0.8 }}
           style={{
-            background: 'rgba(255,255,255,0.55)',
-            border: '1px solid rgba(184,134,11,0.25)',
+            background: 'rgba(255,255,255,0.82)',
+            border: '1px solid rgba(184,134,11,0.55)',
             borderRadius: '16px',
             padding: 'clamp(2rem, 5vw, 3rem)',
             backdropFilter: 'blur(6px)',
@@ -164,7 +164,7 @@ const RSVPForm = () => {
                 onChange={e => handleChange('name', e.target.value)}
                 placeholder="Full Name"
                 style={inputStyle}
-                className="font-body placeholder:text-[rgba(45,8,8,0.5)] focus:border-b-[#B8860B]"
+                className="font-body placeholder:text-[rgba(45,8,8,0.72)] focus:border-b-[#B8860B]"
               />
               {errors.name && (
                 <p className="font-body text-xs mt-1" style={{ color: '#8B0000' }}>{errors.name}</p>
@@ -180,7 +180,7 @@ const RSVPForm = () => {
                 onChange={e => handleChange('email', e.target.value)}
                 placeholder="your@email.com"
                 style={inputStyle}
-                className="font-body placeholder:text-[rgba(45,8,8,0.5)]"
+                className="font-body placeholder:text-[rgba(45,8,8,0.72)]"
               />
               {errors.email && (
                 <p className="font-body text-xs mt-1" style={{ color: '#8B0000' }}>{errors.email}</p>
@@ -196,7 +196,7 @@ const RSVPForm = () => {
                 onChange={e => handleChange('phone', e.target.value)}
                 placeholder="+91 XXXXX XXXXX"
                 style={inputStyle}
-                className="font-body placeholder:text-[rgba(45,8,8,0.5)]"
+                className="font-body placeholder:text-[rgba(45,8,8,0.72)]"
               />
               {errors.phone && (
                 <p className="font-body text-xs mt-1" style={{ color: '#8B0000' }}>{errors.phone}</p>
@@ -221,7 +221,7 @@ const RSVPForm = () => {
                     background: form.attendance === 'accept'
                       ? 'rgba(184,134,11,0.1)'
                       : 'transparent',
-                    color: form.attendance === 'accept' ? '#2D0808' : 'rgba(45,8,8,0.45)',
+                    color: form.attendance === 'accept' ? '#2D0808' : 'rgba(45,8,8,0.72)',
                     fontFamily: 'inherit',
                     fontSize: '0.9rem',
                     cursor: 'pointer',
@@ -247,7 +247,7 @@ const RSVPForm = () => {
                     background: form.attendance === 'decline'
                       ? 'rgba(139,0,0,0.07)'
                       : 'transparent',
-                    color: form.attendance === 'decline' ? '#2D0808' : 'rgba(45,8,8,0.45)',
+                    color: form.attendance === 'decline' ? '#2D0808' : 'rgba(45,8,8,0.72)',
                     fontFamily: 'inherit',
                     fontSize: '0.9rem',
                     cursor: 'pointer',
@@ -274,7 +274,7 @@ const RSVPForm = () => {
                 color: '#FFFFFF',
                 border: '1px solid rgba(212,175,55,0.35)',
                 borderRadius: '100px',
-                fontSize: '0.78rem',
+                fontSize: 'clamp(0.78rem, 1vw, 0.92rem)',
                 letterSpacing: '0.22em',
                 cursor: 'pointer',
                 transition: 'opacity 0.2s',
