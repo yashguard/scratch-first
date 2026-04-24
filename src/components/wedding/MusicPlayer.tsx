@@ -29,7 +29,7 @@ const MusicPlayer = ({ canPlay }: MusicPlayerProps) => {
               setIsPlaying(true);
               startedRef.current = true;
             })
-            .catch(() => {});
+            .catch(() => { });
           window.removeEventListener('click', resume);
           window.removeEventListener('touchstart', resume);
         };
@@ -45,7 +45,7 @@ const MusicPlayer = ({ canPlay }: MusicPlayerProps) => {
       audio.pause();
       setIsPlaying(false);
     } else {
-      audio.play().then(() => setIsPlaying(true)).catch(() => {});
+      audio.play().then(() => setIsPlaying(true)).catch(() => { });
     }
   };
 
@@ -62,7 +62,7 @@ const MusicPlayer = ({ canPlay }: MusicPlayerProps) => {
         transition={{ duration: 0.5 }}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        className="fixed bottom-6 right-6 z-50 w-12 h-12 rounded-full bg-primary/80 backdrop-blur-sm text-primary-foreground flex items-center justify-center shadow-lg border border-gold/30"
+        className="fixed bottom-6 right-6 lg:right-14 lg:bottom-14 z-50 w-12 h-12 rounded-full bg-primary/80 backdrop-blur-sm text-primary-foreground flex items-center justify-center shadow-lg border border-gold/30"
         aria-label={isPlaying ? 'Pause music' : 'Play music'}
         style={{ pointerEvents: canPlay ? 'auto' : 'none' }}
       >
