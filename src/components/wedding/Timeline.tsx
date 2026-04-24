@@ -24,7 +24,7 @@ const events: TimelineEvent[] = [
     time: '10:00 AM',
     description: 'The auspicious turmeric ceremony to bless the couple with joy and prosperity',
     venue: 'Family Residence',
-    image: '/assets/images/haldi.png',
+    image: '/assets/images/haldi.webp',
     side: 'left',
   },
   {
@@ -34,7 +34,7 @@ const events: TimelineEvent[] = [
     description: 'Beautiful henna adorning hands with intricate patterns and timeless motifs',
     venue: 'Summer Palace — Lotus Garden',
     venueUrl: MAPS_URL,
-    image: '/assets/images/mehendi.png',
+    image: '/assets/images/mehendi.webp',
     side: 'right',
   },
   {
@@ -44,7 +44,7 @@ const events: TimelineEvent[] = [
     description: 'An evening of music, dance, and joyful celebration with family and friends',
     venue: 'Summer Palace — Grand Ballroom',
     venueUrl: MAPS_URL,
-    image: '/assets/images/sangeet.png',
+    image: '/assets/images/sangeet.webp',
     side: 'left',
   },
   {
@@ -54,7 +54,7 @@ const events: TimelineEvent[] = [
     description: 'A grand procession to welcome the groom on his most sacred day',
     venue: 'Summer Palace — Main Entrance',
     venueUrl: MAPS_URL,
-    image: '/assets/images/wedding.png',
+    image: '/assets/images/wedding.webp',
     side: 'right',
   },
   {
@@ -64,7 +64,7 @@ const events: TimelineEvent[] = [
     description: 'The sacred union of two souls through ancient Vedic rituals and vows',
     venue: 'Summer Palace — Sacred Mandap',
     venueUrl: MAPS_URL,
-    image: '/assets/images/wedding.png',
+    image: '/assets/images/wedding.webp',
     side: 'left',
   },
   {
@@ -74,7 +74,7 @@ const events: TimelineEvent[] = [
     description: 'A grand celebration to welcome the newlyweds into their new journey together',
     venue: 'Summer Palace — Crystal Hall',
     venueUrl: MAPS_URL,
-    image: '/assets/images/reception.png',
+    image: '/assets/images/reception.webp',
     side: 'right',
   },
 ];
@@ -177,7 +177,7 @@ const Timeline = () => {
             style={{ top: flowerY }}
           >
             <div className="w-10 h-10 -translate-y-1/2">
-              <img src="/assets/images/sakura.png" alt="" className="w-full h-full object-contain drop-shadow-md" />
+              <img src="/assets/images/sakura.webp" alt="" className="w-full h-full object-contain drop-shadow-md" />
             </div>
           </motion.div>
 
@@ -187,7 +187,7 @@ const Timeline = () => {
             style={{ top: flowerY }}
           >
             <div className="w-8 h-8 -translate-y-1/2">
-              <img src="/assets/images/sakura.png" alt="" className="w-full h-full object-contain drop-shadow-md" />
+              <img src="/assets/images/sakura.webp" alt="" className="w-full h-full object-contain drop-shadow-md" />
             </div>
           </motion.div>
 
